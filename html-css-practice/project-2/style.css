@@ -1,0 +1,67 @@
+/* Style the hero section (main landing box) */
+
+  /* Light blue background #e8f0ff*/
+  /* Center all content inside the section */
+ /* Add 80px top & bottom, 20px left & right padding */
+
+ .hero {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1sn5kPRJcfcEAXJI83MD4_YEHgrCXSS69g&s");
+  text-align: center;
+  padding: 80px 20px 80px 20px;
+ }
+
+/* Style the big main heading */
+
+/* Make the text large */
+/* Add space under the heading */
+/* Dark gray text color #333*/
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+/* Style the paragraph below the heading */
+
+  /* Slightly smaller than the heading 18px */
+  /* Medium gray text for readability #555 */
+
+p {
+  font-size: 1em;
+  color: #555;
+}
+
+
+/* Style the button (a link that looks like a button) */
+
+  /* Make the link behave like a button */
+  /* Space above the button 20px */
+  /* Button size: 10px top/bottom, 25px left/right */
+  /* Bright blue background #007bff */
+  /* White text white */
+  /* Remove underline from the link */
+  /* Slightly rounded corners */
+  /* Bold text */
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px 10px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* 
+<!-- 3 Things to Add:
+Add a second button that says “Learn More.”
+Add a background image instead of just a background color.
+Make the text responsive (use % font size or media queries). --> */
+
+@media (max-width:768px) {
+  .hero {
+    font-size: small;
+  }
+} 

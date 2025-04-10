@@ -1,0 +1,48 @@
+/* style the body tag */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffe0b2, #fff8e1);
+}
+
+#chameleon-habitat-fact {
+  border: 2px solid black;
+  padding: 20px;
+}
+
+/*
+ 
+   /* Set the font for the whole page */
+  /* Remove default space around the page */
+ /* Remove default padding inside the body */
+/* Light #fdf6ec; background color */
+/* 3 Things to Add:
+Add a second paragraph about the animal habitat or behavior.
+Make the background a gradient from light orange to light yellow.
+Add a border and padding to the paragraph.  */
+
+
+/* Style the main container that wraps all content */
+ 
+  /* Center all text inside this container */
+  /* Add space inside the container */
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* Style the image */
+
+  /* Make the image 300 pixels wide */
+  /* Round the corners of the image */
+  /* Add a soft shadow around the image rgba(0,0,0,0.2) */
+
+img {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+

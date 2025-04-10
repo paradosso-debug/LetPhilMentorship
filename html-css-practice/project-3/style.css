@@ -1,0 +1,64 @@
+/* Style the main menu box */
+
+  /* Set a maximum width so it's not too wide */
+  /* 40px top/bottom margin, auto left/right centers it */
+  /* Add space inside the box */
+  /* Light gray border around the box #eee */
+  /* Rounded corners */
+  /* Light cream background #fffdf5 */
+  /* Soft shadow for 3D effect rgba(0,0,0,0.1)*/
+
+.menu {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  border: #fffdf5;
+  border-radius: 5px;
+  background-color: #eee;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+/* Style the title of the menu */
+
+ /* Center the heading */
+ /* Add space below the heading */
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+
+/* Remove default bullet points and space */
+
+  /* Remove the bullet points */
+  /* Remove default space on the left */
+  .menu ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+/* Style each menu item */
+
+/* Space between items */
+/* Makes the text a bit bigger */
+/* Increase space between lines for readability */
+
+li {
+  margin: 5px;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.menu-images {
+  margin-top: 10px;
+}
+/* <!-- 3 Things to Add:
+Add images for each menu item.
+Use Flexbox to split the item name and description into two columns.
+Add hover effects to the items (like changing background color). --> */
+
