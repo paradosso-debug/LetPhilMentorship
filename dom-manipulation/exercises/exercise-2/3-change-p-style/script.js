@@ -1,9 +1,7 @@
-// Select all paragraph elements by tag name
-const paragraphs = document.getElementsByTagName("p");
+// Select all paragraph elements by tag name - paragraphs
 
-// Select the first paragraph from the collection
-const paragraph = paragraphs[0];
+// Select the first paragraph from the collection - paragraph
 
 // Change text color and background color
-paragraph.style.color = "white";
-paragraph.style.backgroundColor = "green";
+// style.color
+// style.backgroundColor

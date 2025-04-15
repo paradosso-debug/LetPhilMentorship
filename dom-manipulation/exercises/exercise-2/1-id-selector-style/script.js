@@ -1,31 +1,24 @@
-// 🟢 DOM Manipulation using getElementById
+//  DOM Manipulation using getElementById
 
-// Select the heading using its ID
-const headingElement = document.getElementById("mainHeading");
+// Select the heading using its ID - headingElement
 
-// Select the paragraph using its ID
-const paragraphElement = document.getElementById("mainParagraph");
+// Select the paragraph using its ID - paragraphElement
 
-// Select the button using its ID
-const buttonElement = document.getElementById("mainButton");
+// Select the button using its ID - buttonElement
 
-// 🎨 Style the heading: make the text red
-headingElement.style.color = "red";
+//  Style the heading: make the text red using style.color
 
-// 🎨 Style the paragraph: change background and text color
-paragraphElement.style.backgroundColor = "lightyellow";
-paragraphElement.style.color = "blue";
-paragraphElement.style.padding = "10px";
+//  Style the paragraph: change background and text color using style.backgroundColor
+// style.color
+// syle.padding
 
-// 🎨 Style the button: give it a border and rounded corners
-buttonElement.style.border = "2px solid black";
-buttonElement.style.borderRadius = "8px";
-buttonElement.style.padding = "10px 15px";
-buttonElement.style.backgroundColor = "#f1c40f";
-buttonElement.style.cursor = "pointer";
+// Style the button: give it a border and rounded corners
+// style.border
+// style.borderRadius
+// style.padding
+// style.backgroundColor #f1c40f
+// sytle.cursor
 
-// 🧪 Optional: Add a little interaction
-buttonElement.addEventListener("click", function () {
-  headingElement.textContent = "You clicked the button!";
-  headingElement.style.color = "green";
-});
+// Add a little interaction using addEventListener to the buttonElement
+// headingElement.textContent
+// headingElement.style.color
