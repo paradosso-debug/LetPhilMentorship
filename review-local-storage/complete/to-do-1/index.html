@@ -1,0 +1,30 @@
+<!-- This tells the browser that we are using HTML5 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo List with LocalStorage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main container for the todo app -->
+    <div class="todo-container">
+      <!-- Page title -->
+      <h2>Todo List</h2>
+
+      <!-- Input field where the user types a todo item -->
+      <input type="text" id="todo-input" placeholder="Enter a new todo" />
+
+      <!-- Button to trigger the addTodo() function when clicked -->
+      <button onclick="addTodo()">Add</button>
+
+      <!-- This unordered list will display the todo items -->
+      <ul id="todo-list"></ul>
+
+      <!-- Button to clear all todos from the list and from LocalStorage -->
+      <button onclick="clearTodos()">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
