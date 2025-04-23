@@ -1,59 +1,64 @@
-// JavaScript Exercises: `splice()` Method
+// =========================================
+// Exercise 1: Removing a Single Element
+// =========================================
 
-// Exercise 1: Removing an Element with `splice()`
-const fruits = ["Apple", "Banana", "Cherry", "Mango"];
-// How would you remove "Cherry" from the array using `splice()`?
+// STEP 1: Define an array named "fruits" with multiple fruit names.
+// STEP 2: Remove the fruit "Cherry" from the array using the splice() method.
+// STEP 3: Log the updated "fruits" array.
 
-fruits.splice(2, 1);
+// =========================================
+// Exercise 2: Removing Multiple Elements
+// =========================================
 
-console.log("1.", fruits);
+// STEP 1: Define an array named "numbers" with multiple numeric values.
+// STEP 2: Remove the numbers 30 and 40 from the array using splice().
+// STEP 3: Log the updated "numbers" array.
 
-// Exercise 2: Removing Multiple Elements with `splice()`
-let numbers = [10, 20, 30, 40, 50, 60];
-// How would you remove 30 and 40 from the array using `splice()`?
-numbers.splice(2, 2);
+// =========================================
+// Exercise 3: Adding an Element with splice()
+// =========================================
 
-console.log("2.", numbers);
+// STEP 1: Define an array named "colors" containing multiple color names.
+// STEP 2: Insert the color "Yellow" between "Red" and "Green" using splice().
+// STEP 3: Log the updated "colors" array.
 
-// Exercise 3: Adding Elements with `splice()`
-let colors = ["Red", "Green", "Blue"];
-// How would you add "Yellow" between "Red" and "Green" using `splice()`?
-colors.splice(1, 0, "Yellow");
-console.log("3.", colors);
+// =========================================
+// Exercise 4: Replacing an Element with splice()
+// =========================================
 
-// Exercise 4: Replacing Elements with `splice()`
-let animals = ["Dog", "Cat", "Rabbit"];
-// How would you replace "Cat" with "Elephant" using `splice()`?
+// STEP 1: Define an array named "animals" containing multiple animal names.
+// STEP 2: Replace "Cat" with "Elephant" using splice().
+// STEP 3: Log the updated "animals" array.
 
-animals.splice(1, 1, "Elephant");
+// =========================================
+// Exercise 5: Removing the First Element
+// =========================================
 
-console.log("4.", animals);
+// STEP 1: Define an array named "months" containing month names.
+// STEP 2: Remove the first element from the "months" array using splice().
+// STEP 3: Log the updated "months" array.
 
-// Exercise 5: Removing the First Element with `splice()`
-let months = ["January", "February", "March", "April"];
-// How would you remove the first element from the array using `splice()`?
-months.splice(0, 1);
-console.log("5.", months);
+// =========================================
+// Exercise 6: Removing the Last Element
+// =========================================
 
-// Exercise 6: Removing the Last Element with `splice()`
-let scores = [90, 80, 70, 60];
-// How would you remove the last element from the array using `splice()`?
-scores.splice(scores.length - 1, 1);
-console.log("6.", scores);
+// STEP 1: Define an array named "scores" containing numeric values.
+// STEP 2: Remove the last element from the "scores" array using splice().
+// STEP 3: Log the updated "scores" array.
 
-// Exercise 7: Inserting Multiple Elements with `splice()`
-let items = ["Pen", "Pencil", "Eraser"];
-// How would you insert "Notebook" and "Marker" between "Pen" and "Pencil" using `splice()`?
-items.splice(1, 0, "Notebook", "Marker");
-console.log("7.", items);
+// =========================================
+// Exercise 7: Inserting Multiple Elements
+// =========================================
 
-// Exercise 8: Clearing an Array with `splice()`
-let letters = ["A", "B", "C", "D"];
-// How would you clear all elements from the array using `splice()`?
+// STEP 1: Define an array named "items" containing item names.
+// STEP 2: Insert "Notebook" and "Marker" between "Pen" and "Pencil" using splice().
+// STEP 3: Log the updated "items" array.
 
-const clonedLetters = [...letters];
+// =========================================
+// Exercise 8: Clearing an Entire Array
+// =========================================
 
-clonedLetters.splice(0, clonedLetters.length);
-
-console.log("8.", letters);
-console.log(clonedLetters);
+// STEP 1: Define an array named "letters" containing multiple letter elements.
+// STEP 2: Make a copy of the array named "clonedLetters".
+// STEP 3: Clear all elements from the "clonedLetters" array using splice().
+// STEP 4: Log both the original "letters" array and the cleared "clonedLetters" array.
