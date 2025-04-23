@@ -174,31 +174,32 @@ let input1 = document.createElement("input");
 let input2 = document.createElement("input");
 let input3 = document.createElement("input");
 
-let submitAllInputsBtn = document.createElement("button");
-submitAllInputsBtn.textContent = "Submit all";
+// let submitAllInputsBtn = document.createElement("button");
+// submitAllInputsBtn.textContent = "Submit all";
 
 let submitAllInputsBtn2 = document.createElement("button");
 submitAllInputsBtn2.textContent = "Jairo's Submit all";
 
-submitAllInputsBtn2.setAttribute(
-  "onclick",
-  `retreiveAllInputs(${[input1.value, input2.value, input3.value]})`
-);
+// submitAllInputsBtn2.setAttribute(
+//   "onclick",
+//   `retreiveAllInputs(${[input1.value, input2.value, input3.value]})`
+// );
 
-function retrieveAllInputs(inputs) {
-  userInputs.push(...inputs);
-  console.log(userInputs);
-}
+// function retrieveAllInputs(inputs) {
+//   userInputs.push(...inputs);
+//   console.log(userInputs);
+// }
 
-submitAllInputsBtn.addEventListener("click", () => {
+submitAllInputsBtn2.addEventListener("click", () => {
   let allValues = [input1.value, input2.value, input3.value];
 
   userInputs.push(...allValues);
   console.log(userInputs);
+  console.log(allValues);
 });
 
 document.body.append(input1);
 document.body.append(input2);
 document.body.append(input3);
-document.body.append(submitAllInputsBtn);
+// document.body.append(submitAllInputsBtn);
 document.body.append(submitAllInputsBtn2);
