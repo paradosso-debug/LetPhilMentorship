@@ -1,3 +1,19 @@
+// //Remove one item:
+// let fruits = ["Apple", "Mango", "Kiwi"];
+
+// fruits.splice(1, 2);
+// console.log(fruits);
+
+// //Insert an item:
+// let colors = ["Yellow", "Blue", "Green"];
+// colors.splice(1, 0, "Red");
+// console.log(colors);
+
+// //Replace an item:
+// let pets = ["Dog", "Cat"];
+// pets.splice(1, 1, "Rabbit");
+// console.log(pets);
+
 // =========================================
 // Exercise 1: Removing a Single Element
 // =========================================
@@ -5,6 +21,10 @@
 // STEP 1: Define an array named "fruits" with multiple fruit names.
 // STEP 2: Remove the fruit "Cherry" from the array using the splice() method.
 // STEP 3: Log the updated "fruits" array.
+
+let fruits = ["Apple", "Banana", "Cherry"];
+fruits.splice(2, 1);
+console.log(fruits);
 
 // =========================================
 // Exercise 2: Removing Multiple Elements
