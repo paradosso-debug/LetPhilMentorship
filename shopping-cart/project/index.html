@@ -60,8 +60,10 @@
           <input id="productPrice" type="number" placeholder="price" />
           <input id="productImage" type="text" placeholder="image url" />
           <button id="addButton">+</button>
+          <!-- Clear cart button -->
         </div>
         <div id="listContainer"></div>
+        <!-- Paragraph to display the total cost -->
       </div>
     </div>
     <script>
@@ -74,17 +76,22 @@
           count: 1,
         },
       ];
-
+      // Feature 3: Input Validation
+      // =====================================
+      // STEP 1: Check if the name, price, and image inputs are filled before pushing a product.
+      // STEP 2: If invalid, show an alert and do not push the product.
+      // STEP 3: If valid, continue adding as usual.
       addButton.addEventListener("click", function () {
-        const name = productName.value;
-        const price = productPrice.value;
-        const image = productImage.value;
+        const name = productName.value.trim();
+        const price = parseFloat.value;
+        const image = productImage.value.trim();
+        // Check if any input is invalid
         const count = 1;
         products.push({
           name,
           price,
           image,
-          count,
+          count: 1,
         });
 
         renderListItems();
@@ -93,9 +100,19 @@
       // https://media.istockphoto.com/id/488160041/photo/mens-shirt.jpg?s=612x612&w=0&k=20&c=xVZjKAUJecIpYc_fKRz_EB8HuRmXCOOPOtZ-ST6eFvQ=
       // https://media.istockphoto.com/id/697913308/photo/orange-men-shorts-for-swimming.jpg?s=612x612&w=0&k=20&c=Ta47ejxSIVtknPGGZ92BB_KGI9bLLZuU_C0EaOXl0AA=
 
+      // Feature 2: Add a Clear Cart Button
+      // =====================================
+      // STEP 1: Add a new "Clear Cart" button below the "Add" button.
+      // STEP 2: When clicked, it should empty the products array.
+      // STEP 3: Re-render the list to show an empty cart.
+
+      // Feature 1: Show Total Cost at the Bottom
+      // =====================================
+      // STEP 1: Add an empty <p> element below the product list to display total cost.
+      // STEP 2: In renderListItems(), update that element with the total cost after the loop.
+
       function renderListItems() {
         listContainer.innerHTML = "";
-
         let totalCost = 0;
         for (let i = 0; i < products.length; i++) {
           const current = products[i];
@@ -114,6 +131,7 @@
 
         console.log("totalCost =", totalCost);
       }
+      // Show the total cost in the paragraph
 
       const ListItem = (idx, name, price, image, count) => {
         return `
@@ -142,10 +160,15 @@
         console.log("decrase =", idx);
         if (count === 1) {
           products.splice(idx, 1);
-        }
+        } // Otherwise just decrease the count
 
         renderListItems();
       }
+      // Feature 4: Limit Maximum Quantity
+      // =====================================
+      // STEP 1: In increaseCount(), check if the current count is 10 or more.
+      // STEP 2: If yes, show an alert and stop from increasing.
+      // STEP 3: If less, continue increasing the count and re-render the list. -->
 
       function increaseCount(idx, count) {
         count++;
@@ -154,9 +177,6 @@
       }
 
       window.onload = renderListItems();
-
-      // const promptInput = prompt("user input");
-      // console.log(promptInput);
     </script>
   </body>
 </html>

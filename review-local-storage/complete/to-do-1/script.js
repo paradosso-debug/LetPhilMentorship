@@ -19,21 +19,6 @@
 
 // STEP 9: Call a function named renderTodos to update the screen with the new list
 
-function addTodo() {
-  const todoInput = document.getElementById("todo-input");
-  const todoText = todoInput.value.trim();
-
-  if (todoText === "") return;
-
-  const todos = JSON.parse(localStorage.getItem("todos")) || [];
-  todos.push(todoText);
-
-  localStorage.setItem("todos", JSON.stringify(todos));
-
-  todoInput.value = "";
-
-  renderTodos();
-}
 //-------------------------------------------------------------------
 
 // STEP 10: Create a function called renderTodos that shows all saved todos on the screen
@@ -60,17 +45,6 @@ function addTodo() {
 
 // STEP 19: Add the newly created <li> to the todo list using .appendChild
 
-function renderTodos() {
-  const todoList = document.getElementById("todo-list");
-  todoList.innerHTML = "";
-  const todos = JSON.parse(localStorage.getItem("todos")) || [];
-  todos.forEach((todo, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `${todo} <button onclick="removeTodo(${index})"> KILL-BILL</button>`;
-    todoList.appendChild(li);
-  });
-}
-//shes legit
 //-------------------------------------------------------------------
 
 // STEP 20: Create a function named removeTodo that accepts the index of the item to delete
@@ -83,13 +57,6 @@ function renderTodos() {
 
 // STEP 24: Call renderTodos() to update the screen and show the updated list
 
-function removeTodo(index) {
-  const todos = JSON.parse(localStorage.getItem("todos") || []);
-  todos.splice(index, 1);
-  localStorage.setItem("todos", JSON.stringify(todos));
-  renderTodos();
-}
-
 //-------------------------------------------------------------------
 
 // STEP 25: Create a function named clearTodos to remove all todo items
@@ -98,14 +65,7 @@ function removeTodo(index) {
 
 // STEP 27: Then call renderTodos() to clear the list from the screen
 
-function clearTodos() {
-  localStorage.removeItem("todos");
-  renderTodos();
-}
-
 //-------------------------------------------------------------------
 
 // STEP 28: When the page first loads, call renderTodos() once
 // This will display any previously saved todos that are still in localStorage
-
-renderTodos();
