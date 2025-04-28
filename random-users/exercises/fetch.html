@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const url = "https://randomuser.me/api";
+
+      async function getData(url) {
+        const res = await fetch(url);
+        const json = await res.json();
+        return json;
+        // return new Promise(function (resolve, reject) {
+        //   var xhr = new XMLHttpRequest();
+        //   xhr.open("GET", url, true);
+        //   xhr.onload = function () {
+        //     if (xhr.status >= 200 && xhr.status < 400) {
+        //       var data = JSON.parse(xhr.responseText);
+        //       resolve(data);
+        //     } else {
+        //       reject(new Error("Request failed: " + xhr.statusText));
+        //     }
+        //   };
+        //   xhr.onerror = function () {
+        //     reject(new Error("Request failed"));
+        //   };
+        //   xhr.send();
+        // });
+      }
+
+      async function makeRequest() {
+        const res = await getData(url);
+        return res.results[0];
+      }
+
+      function plusButton() {
+        const div = document.createElement("div");
+        div.style.width = "150px";
+        div.style.height = "110px";
+        div.textContent = "+";
+        div.style.fontSize = "50px";
+        div.style.border = "1px solid black";
+        div.style.backgroundColor = "lightgrey";
+        div.style.textAlign = "center";
+        div.style.paddingTop = "40px";
+        div.onclick = async function () {
+          div.style.fontSize = "18px";
+          div.textContent = "loading...";
+          await getAnotherPerson();
+          div.remove();
+        };
+        return div;
+      }
+
+      async function display() {
+        const val = await makeRequest();
+        // document.body.innerHTML = JSON.stringify(val);
+        const name = val.name.first;
+        const picture = val.picture.medium;
+        const randomUser = randomUserCard(picture, name);
+        document.body.appendChild(randomUser);
+
+        document.body.appendChild(plusButton());
+      }
+
+      // get antoher person
+      async function getAnotherPerson() {
+        const val = await makeRequest();
+        // document.body.innerHTML = JSON.stringify(val);
+        const name = val.name.first;
+        const picture = val.picture.medium;
+        const randomUser = randomUserCard(picture, name);
+        document.body.appendChild(randomUser);
+
+        document.body.appendChild(plusButton());
+      }
+
+      // remove person
+      function removePerson(current) {
+        current.remove();
+      }
+
+      function randomUserCard(picture, name) {
+        const div = document.createElement("div");
+        div.onclick = function () {
+          removePerson(this);
+        };
+
+        const img = document.createElement("img");
+        const h3 = document.createElement("h3");
+        img.src = picture;
+        img.alt = "hello";
+        h3.innerText = name;
+        div.appendChild(img);
+        div.appendChild(h3);
+        div.style.height = "150px";
+        div.style.width = "150px";
+        div.style.border = "1px solid black";
+        div.style.textAlign = "center";
+        return div;
+      }
+
+      display();
+
+      // function sum(a, b) {
+      //   return a + b;
+      // }
+
+      // const j = getDataAndDisplay().then((data) => {
+      //   console.log("data =", data);
+      // });
+    </script>
+  </body>
+</html>

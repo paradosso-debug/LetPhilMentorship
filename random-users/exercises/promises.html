@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="axios.js"></script>
+    <script>
+      async function main() {
+        const r = await axios.get("https://randomuser.me/api");
+        console.log(r);
+        document.body.append(JSON.stringify(r.data.results));
+      }
+
+      main();
+    </script>
+  </body>
+</html>
