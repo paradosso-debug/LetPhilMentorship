@@ -61,31 +61,42 @@
           <input id="productImage" type="text" placeholder="image url" />
           <button id="addButton">+</button>
           <!-- Clear cart button -->
+          <button id="clearButton">Clear</button>
         </div>
         <div id="listContainer"></div>
         <!-- Paragraph to display the total cost -->
+         <p id="totalDisplay" style="margin-top: 10px; font-size: 20px"></p>
+
+         </div>
+
       </div>
     </div>
     <script>
       let products = [
-        {
-          name: "shirt",
-          price: "20",
-          image:
-            "https://media.istockphoto.com/id/488160041/photo/mens-shirt.jpg?s=612x612&w=0&k=20&c=xVZjKAUJecIpYc_fKRz_EB8HuRmXCOOPOtZ-ST6eFvQ=",
-          count: 1,
-        },
+        // {
+        //   name: "shirt",
+        //   price: "20",
+        //   image:
+        //     "https://media.istockphoto.com/id/488160041/photo/mens-shirt.jpg?s=612x612&w=0&k=20&c=xVZjKAUJecIpYc_fKRz_EB8HuRmXCOOPOtZ-ST6eFvQ=",
+        //   count: 1,
+        // },
       ];
       // Feature 3: Input Validation
       // =====================================
       // STEP 1: Check if the name, price, and image inputs are filled before pushing a product.
       // STEP 2: If invalid, show an alert and do not push the product.
       // STEP 3: If valid, continue adding as usual.
+
+
       addButton.addEventListener("click", function () {
         const name = productName.value.trim();
-        const price = parseFloat.value;
-        const image = productImage.value.trim();
+        const price = parseFloat(productPrice.value);
+        const image = productImage.value.trim(); 
         // Check if any input is invalid
+        if (!name || isNaN(price) || price <= 0 || !image){
+          alert("Please check product details");
+          return
+        }
         const count = 1;
         products.push({
           name,
@@ -106,6 +117,11 @@
       // STEP 2: When clicked, it should empty the products array.
       // STEP 3: Re-render the list to show an empty cart.
 
+      clearButton.addEventListener("click", function (){
+        products = [];
+        renderListItems();
+      })
+
       // Feature 1: Show Total Cost at the Bottom
       // =====================================
       // STEP 1: Add an empty <p> element below the product list to display total cost.
@@ -115,7 +131,7 @@
         listContainer.innerHTML = "";
         let totalCost = 0;
         for (let i = 0; i < products.length; i++) {
-          const current = products[i];
+          const current = products[i]; //iterator
           console.log(current);
           const listItem = ListItem(
             i,
@@ -128,7 +144,8 @@
 
           totalCost += current.count * current.price;
         }
-
+        document.getElementById("totalDisplay").textContent = 
+        "Total: $" + totalCost;
         console.log("totalCost =", totalCost);
       }
       // Show the total cost in the paragraph
@@ -157,10 +174,12 @@
       };
 
       function decreaseCount(idx, count) {
-        console.log("decrase =", idx);
+        console.log("decrease =", idx);
         if (count === 1) {
           products.splice(idx, 1);
-        } // Otherwise just decrease the count
+        } else{
+          products[idx].count--;
+        }// Otherwise just decrease the count
 
         renderListItems();
       }
@@ -170,10 +189,17 @@
       // STEP 2: If yes, show an alert and stop from increasing.
       // STEP 3: If less, continue increasing the count and re-render the list. -->
 
+      
+
       function increaseCount(idx, count) {
+        if(count>=10)
+      {
+        alert("Too many articles of clothing");
+      }else{
         count++;
         products[idx].count = count;
         renderListItems();
+      }
       }
 
       window.onload = renderListItems();
