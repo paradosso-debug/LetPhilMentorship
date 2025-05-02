@@ -31,7 +31,6 @@ This guide will walk you through the features and steps to use the enhanced proj
 
 1. Fetch **5** random users.
 2. Iterate over the results and count how many are `"male"` and how many are `"female"` (look at the `gender` property).
-3. Log a message like:
 
 ---
 
@@ -40,6 +39,16 @@ This guide will walk you through the features and steps to use the enhanced proj
 1. Fetch **5** random users.
 2. For each user, read their age from `dob.age`.
 3. Calculate the average age across all fetched users.
-4. Log the average (rounded to 1 decimal place).
 
 ---
+
+## Homework
+
+1. **Fetch two Users**: Click 'Fetch 2 Random User' to retrieve one profile.
+2. **Fetch Multiple Users**: Click 'Fetch 10 Random Users' to retrieve a batch.
+3. **Filtering & Searching**: Use the search box to filter displayed users by Location.
+4. **More User Details**: Cards show name, age, email, location, and phone number.
+5. **Theme Toggle**: Switch between light and dark modes with the toggle.
+6. **Use CSS**: Link a style.css file to your JS file, and style it as you wish - Get creative!
+
+-- Api `https://randomuser.me/api/?results`
