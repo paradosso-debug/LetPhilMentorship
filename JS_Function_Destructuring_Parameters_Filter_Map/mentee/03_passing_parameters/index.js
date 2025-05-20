@@ -72,6 +72,3 @@ console.log(temp(80));
 function weatherToday(temp) {
   console.log(`It is ${temp}`);
 }
-weatherToday(25);
-
-//Manny why add the secn
