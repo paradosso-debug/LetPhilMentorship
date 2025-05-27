@@ -1,0 +1,11 @@
+// === Practice Tasks ===
+// Task 1: Create a function that takes a book object and logs the title and author.
+// Task 2: Create a function that receives a movie object and logs its name and rating.
+// Task 3: Pass a product object to a function and display its name and price.
+// Task 4: Create a function that logs weather info (temperature and condition) from a weather object.
+// Task 5: Create a function that takes a profile object and logs username and bio.
+// Task 6: Pass a dog object with name and breed to a function and log it.
+// Task 7: Create a function that accepts a music track object and logs track name and artist.
+// Task 8: Create a function that logs app settings (theme and notifications).
+// Task 9: Create a function that takes a student object and logs name and grade.
+// Task 10: Create a function that receives a location object and logs city and country.
