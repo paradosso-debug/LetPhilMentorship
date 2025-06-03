@@ -4,7 +4,7 @@ These projects integrate **DOM manipulation, local storage, navigation, API usag
 
 ## 📌 Project List
 
-### 1. Personal Dashboard
+### 1. Personal Dashboard$
 
 **Tech:** HTML, CSS, JavaScript  
 **Features:**  
