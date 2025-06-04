@@ -60,8 +60,6 @@ function student({ name, grade }) {
 
 student({ name: "Jocelin", grade: "32" });
 
-// Task 10: Create a function that receives a location object and logs city and country.
-
 function locationLog({ city, country }) {
   console.log(`city: ${city}, country: ${country}`);
 }
